@@ -36,14 +36,7 @@ export class TrackerComponent implements OnInit {
     this.newItem = new Item();
   }
 
-  findTotal() {
-    let total = 0;
-    for (let i = 0; i < this.items.length; i++) {
-      let item = this.items[i];
 
-    }
-    return total;
-  }
 
 
   ngOnInit() {
