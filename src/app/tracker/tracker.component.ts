@@ -48,6 +48,8 @@ showTotal() {
  return total;
 }
 
+
+
   ngOnInit() {
 
   }
