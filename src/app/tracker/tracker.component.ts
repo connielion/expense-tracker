@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ITEMS } from '../mock-items';
+import { Items } from '../tracker';
 
 @Component({
   selector: 'app-tracker',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tracker.component.css']
 })
 export class TrackerComponent implements OnInit {
+
+  items = ITEMS;
 
   constructor() { }
 
