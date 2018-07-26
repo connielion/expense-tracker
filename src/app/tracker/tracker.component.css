@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Gaegu|Maven+Pro:700');
+
+table {
+  font-size: 18px;
+  text-align: center;
+}
+
+
+
+.maven-pro {
+  font-family: 'Maven Pro', sans-serif;
+}
+
+.gaegu {
+  font-family: 'Gaegu', cursive;
+}
+
+form {
+  font-size: 24px;
+}
