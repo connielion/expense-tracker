@@ -1,9 +1,10 @@
 <div class="container" style="margin-top: 80px;">
   <div class="row">
-    <h1 class="text-center">Track $$$</h1>
+    <h1 class="text-center">Track $pending</h1>
   </div>
-  <div class="table table-bordered table-responsive">
-      <thead>
+
+  <table class="table table-bordered table-responsive">
+    <thead>
           <tr>
             <th>Amount Spent</th>
             <th>Spent On...?</th>
@@ -12,13 +13,34 @@
             <th>Delete</th>
           </tr>
         </thead>
+
         <tbody>
           <tr *ngFor="let item of items">
             <td>{{ item.amount }}</td>
             <td>{{ item.name }}</td>
             <td>{{ item.date }}</td>
-            <td><a class="btn btn-warning" (click)="editItem(item)">Edit</a></td>
-            <td><a class="btn btn-danger" (click)="deleteContact(contact)">Delete</a></td
+            <!--Edit-->
+            <!--Delete-->
+            <td><a class="btn btn-warning">Edit</a></td>
+            <td><a class="btn btn-danger" (click)="deleteItem(item)">Delete</a></td>
           </tr>
-  </div>
+        </tbody>
+      </table>
+        <!--Add-->
+        <hr>
+      <form action="POST" (ngSubmit)="addItem()">
+        <div class="form-group">
+          <label for="amount">Amount</label>
+          <input type="text" class="form-control" id="amount" name="amount" placeholder="Amount spent.." [(ngModel)]="newItem.amount">
+        </div>
+        <div class="form-group">
+          <label for="description">What did you spend on?</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Description" [(ngModel)]="newItem.name">
+        </div>
+        <div class="form-group">
+          <label for="date">Date</label>
+          <input type="date" class="form-control" id="date" name="date" placeholder="Date" [(ngModel)]="newItem.date">
+        </div>
+        <button class="btn btn-success">Add</button>
+      </form>
 </div>
