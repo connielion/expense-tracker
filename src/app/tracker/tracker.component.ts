@@ -31,6 +31,7 @@ export class TrackerComponent implements OnInit {
     const p = this.items[prev];
     this.items.push(this.newItem);
     this.newItem = new Item();
+
   }
 
   ngOnInit() {

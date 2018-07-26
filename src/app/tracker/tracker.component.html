@@ -1,27 +1,28 @@
 <div class="container" style="margin-top: 80px;">
   <div class="row">
-    <h1 class="text-center">Track $pending</h1>
+    <h1 class="text-center"><i class="fas fa-money-bill-wave"></i> Track Your $pending <i class="fas fa-money-bill-wave"></i></h1>
   </div>
 
   <table class="table table-bordered table-responsive">
     <thead>
-          <tr>
-            <th>Amount Spent</th>
-            <th>Spent On...?</th>
-            <th>Date</th>
-            <th>Edit</th>
-            <th>Delete</th>
-          </tr>
-        </thead>
+      <tr>
+        <!--5 columns: Amount, Item, Date, edit, delete-->
+        <th>Amount Spent $</th>
+        <th>Spent On...?</th>
+        <th>Date</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
 
         <tbody>
           <tr *ngFor="let item of items">
             <td>{{ item.amount }}</td>
             <td>{{ item.name }}</td>
             <td>{{ item.date }}</td>
-            <!--Edit-->
-            <!--Delete-->
+            <!--Edit btn-->
             <td><a class="btn btn-warning">Edit</a></td>
+             <!--Delete btn-->
             <td><a class="btn btn-danger" (click)="deleteItem(item)">Delete</a></td>
           </tr>
         </tbody>
@@ -31,7 +32,7 @@
       <form action="POST" (ngSubmit)="addItem()">
         <div class="form-group">
           <label for="amount">Amount</label>
-          <input type="text" class="form-control" id="amount" name="amount" placeholder="Amount spent.." [(ngModel)]="newItem.amount">
+          <input type="text" class="form-control" id="amount" name="amount" placeholder="Amount spent.." [(ngModel)]="newItem.amount" required minlength="1">
         </div>
         <div class="form-group">
           <label for="description">What did you spend on?</label>
