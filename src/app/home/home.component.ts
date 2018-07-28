@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   constructor() { }
-  hi = 'Hi.';
-  intro = 'This is my project for challenge 1.';
+  hi = 'Hi. I am Connie.';
+  intro = 'This is my project for challenge 1. There is no form validation...yet.';
 
   ngOnInit() {
   }
