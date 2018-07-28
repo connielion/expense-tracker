@@ -41,7 +41,7 @@ showTotal() {
 
  for (let i = 0; i < this.items.length; i++) {
    if (this.items[i].amount) {
-     total += +this.items[i].amount;
+     total += +this.items[i].amount; // total = total + this.items[i].amount
      this.total = total;
    }
  }
