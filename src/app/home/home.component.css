@@ -1,0 +1,12 @@
+
+.txt-bg {
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid white;
+  border-radius: 8px;
+}
+
+ul {
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 18px;
+}
+
